@@ -3,3 +3,41 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.App {
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  /* background-color: gray; */
+}
+
+html {
+  overflow-x: hidden;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+  html {
+    overflow-x: hidden;
+  }
+
+}
+
+
+@media screen and (max-width: 360px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+}
