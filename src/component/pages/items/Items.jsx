@@ -229,12 +229,17 @@ const Items = ( {hideElement} ) => {
   const handleClearCart = () => {
     dispatch(clearCart());
   };
-
+  
   const getTotalPrice = () => {
+    if (!cartItems || cartItems.length === 0) {
+      return 0; // Return 0 if the cart is empty or cartItems is null/undefined
+    }
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
-  const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+  const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0) ;
+
+
 
   const handleToggleCart = () => {
     setCartVisible(!isCartVisible);

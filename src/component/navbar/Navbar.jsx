@@ -3,14 +3,10 @@ import './navbar.css';
 import { ShoppingCart } from '@material-ui/icons';
 import { SearchOutlined } from '@material-ui/icons';
 import { FaFacebook, FaInstagram, FaPhoneAlt, FaTwitter } from 'react-icons/fa';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState(null);
-
-  const handleLinkClick = (index) => {
-    setActiveLink(index);
-  };
-
+  const location = useLocation();
   const links = [
     { text: 'Home', path: '/' },
     { text: 'Gift Catalogue', path: '/gift-catalogue' },
@@ -20,48 +16,15 @@ const Navbar = () => {
 
   return (
     <>
-
-<nav className="navigation"  role="navigation">
-      <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-          <li>
-          <a className="get_involve" href="/">
-            Home
-          </a>
-        </li>
-     
-        <li>
-          <a className="get_involve" href="/about">
-          About us 
-          </a>
-        </li>
-        <li>
-          <a className="get_involve" href="/gift-catalogue">
-           Gift Catalogue
-          </a>
-        </li>
-        <li>
-          <a className="get_involve" href="/contact">
-          Contact us
-          </a>
-        </li>
-            <li className="three-icons"><a href="#"><FaFacebook /> </a></li>
-            <li> <a href=""><FaTwitter /> </a> </li>
-            <li>          <a className="contact-icon"><FaInstagram /></a> </li>
-          </ul>
-        </div>
+      <nav className="navigation" role="navigation">
+        {/* Your menuToggle code here */}
       </nav>
 
       <div className='logo-mobile'>
-        <a href="/">  
+        <NavLink to="/">
           <img src="/logo.png" alt="magikworld" />
-
-        </a>
-        </div>
+        </NavLink>
+      </div>
 
       <div className='nav-bar'>
         <div className='logo-div'>
@@ -71,13 +34,15 @@ const Navbar = () => {
           <ul className='links'>
             {links.map((link, index) => (
               <li key={index}>
-                <a
-                  href={link.path}
-                  className={`nav-link ${activeLink === index ? 'active' : ''}`}
-                  onClick={() => handleLinkClick(index)}
+                <NavLink
+                  to={link.path}
+                  activeClassName="active"
+                  isActive={() => link.path === location.pathname}
                 >
+                  <span>
                   {link.text}
-                </a>
+                  </span>
+                </NavLink>
               </li>
             ))}
           </ul>

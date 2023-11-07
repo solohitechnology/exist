@@ -99,6 +99,17 @@
     margin-left: 50px;
   }
 
+  /* Add your styles for the active link here */
+.active {
+  background-color: firebrick; /* Choose your desired background color */
+  color: white; /* Choose your desired text color for the active link */
+}
+
+.active span {
+  color: white;
+}
+
+
 
 
 
