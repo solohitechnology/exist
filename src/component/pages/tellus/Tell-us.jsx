@@ -10,7 +10,7 @@ const Tellus= () => {
         <>
         <div className="tellus">
         <video autoPlay loop muted>
-      <source src="/poro.mp4" type="video/mp4" />
+      <source src="https://res.cloudinary.com/dssjiciev/video/upload/v1699518239/poro_kfylqs.mp4" type="video/mp4" />
     </video>
             <div className="tellus-form">
                 <form action="">

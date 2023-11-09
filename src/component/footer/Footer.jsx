@@ -72,7 +72,7 @@ const Footer = () => {
                 <li><a href="/">Privacy & Policy </a></li>
                 <li><a href="/">Terms & Condition</a></li>
             </div>
-            <p>&copy;2023 MagikWorld01.com All rights reserved</p>
+            <p className='copy' >&copy;2023 MagikWorld01.com All rights reserved</p>
            </div>
         </footer>
     )

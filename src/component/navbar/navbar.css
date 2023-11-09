@@ -105,6 +105,11 @@
   color: white; /* Choose your desired text color for the active link */
 }
 
+.links-div .links .active1 {
+  background-color: rgb(103, 95, 95); /* Choose your desired background color */
+  /* Choose your desired text color for the active link */
+}
+
 .active span {
   color: white;
 }
@@ -237,12 +242,33 @@
     display: none;
   }
 
+  .active {
+    background-color: firebrick; /* Choose your desired background color */
+    color: white; /* Choose your desired text color for the active link */
+  }
+  
+  .active1 {
+    background-color: rgb(103, 95, 95); /* Choose your desired background color */
+    /* Choose your desired text color for the active link */
+  }
+  
+  .active span {
+    color: white;
+  }
+  
+
+  .soloimage {
+    display: none;
+  }
+
   .logo-mobile {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
-    margin-bottom: 100px;
+    margin-right: 30px;
+  
+    /* margin-bottom: 100px; */
   }
 
   
