@@ -1,3 +1,6 @@
+
+
+
 import React, { useState } from 'react';
 import './navbar.css';
 import { ShoppingCart } from '@material-ui/icons';
@@ -17,13 +20,44 @@ const Navbar = () => {
   return (
     <>
       <nav className="navigation" role="navigation">
-        {/* Your menuToggle code here */}
+      <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+          <li>
+          <a className="get_involve" href="/">
+            Home
+          </a>
+        </li>
+     
+        <li>
+          <a className="get_involve" href="/about">
+          About us 
+          </a>
+        </li>
+        <li>
+          <a className="get_involve" href="/gift-catalogue">
+           Gift Catalogue
+          </a>
+        </li>
+        <li>
+          <a className="get_involve" href="/contact">
+          Contact us
+          </a>
+        </li>
+            <li className="three-icons"><a href="#"><FaFacebook /> </a></li>
+            <li> <a href=""><FaTwitter /> </a> </li>
+            <li>          <a className="contact-icon"><FaInstagram /></a> </li>
+          </ul>
+        </div>
       </nav>
 
       <div className='logo-mobile'>
-        <NavLink to="/">
+        <a href='/'>
           <img src="/logo.png" alt="magikworld" />
-        </NavLink>
+         </a> 
       </div>
 
       <div className='nav-bar'>
@@ -33,7 +67,7 @@ const Navbar = () => {
         <div className='links-div'>
           <ul className='links'>
             {links.map((link, index) => (
-              <li key={index}>
+              <li       activeClassName="active1" key={index}>
                 <NavLink
                   to={link.path}
                   activeClassName="active"

@@ -62,7 +62,7 @@ const Navbuttom = () => {
             Express your feelings with meaningfull gifts.
         </p>
         <div className="button-gift">
-            <a href="/"> Gift Cataloge</a> <span className="first-pointer"><img src="/pointer.png" alt="" /></span> 
+            <a href="/gift-catalogue"> Gift Cataloge</a> <span className="first-pointer"><img src="/pointer.png" alt="" /></span> 
         </div>
         </div>
       <div

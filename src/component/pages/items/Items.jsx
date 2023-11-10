@@ -20,57 +20,57 @@ const data = {
     {
       id: 1,
       image: "/m1.jpg",
-      price: "18,000",
+      price: 18000,
       for: "for him",
       type: "package",
     },
-    { id: 2, image: "/m2.jpg", price: "25,000", for: "for her", type: "gift" },
-    { id: 3, image: "/m3.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 4, image: "/m20.jpg", price: "25,000", for: "for her", type: "gift" },
-    { id: 5, image: "/m30.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 6, image: "/m40.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 7, image: "/m70.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 8, image: "/m60.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 9, image: "/m2.jpg", price: "25,000", for: "for her", type: "gift" },
-    { id: 10, image: "/m3.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 11, image: "/m20.jpg", price: "25,000", for: "for her", type: "gift" },
-    { id: 12, image: "/m30.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 13, image: "/m40.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 14, image: "/m70.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 15, image: "/m60.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 16, image: "/m2.jpg", price: "25,000", for: "for her", type: "gift" },
-    { id: 17, image: "/m3.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 18, image: "/m20.jpg", price: "25,000", for: "for her", type: "gift" },
-    { id: 19, image: "/m30.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 20, image: "/m40.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 21, image: "/m70.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 22, image: "/m60.jpg", price: "12,000", for: "for kids", type: "toy" }
+    { id: 2, image: "/m2.jpg", price: 25000, for: "for her", type: "gift" },
+    { id: 3, image: "/m3.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 4, image: "/m20.jpg", price: 25000, for: "for her", type: "gift" },
+    { id: 5, image: "/m30.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 6, image: "/m40.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 7, image: "/m70.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 8, image: "/m60.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 9, image: "/m2.jpg", price: 25000, for: "for her", type: "gift" },
+    { id: 10, image: "/m3.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 11, image: "/m20.jpg", price: 25000, for: "for her", type: "gift" },
+    { id: 12, image: "/m30.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 13, image: "/m40.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 14, image: "/m70.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 15, image: "/m60.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 16, image: "/m2.jpg", price: 25000, for: "for her", type: "gift" },
+    { id: 17, image: "/m3.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 18, image: "/m20.jpg", price: 25000, for: "for her", type: "gift" },
+    { id: 19, image: "/m30.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 20, image: "/m40.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 21, image: "/m70.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 22, image: "/m60.jpg", price: 12000, for: "for kids", type: "toy" }
     //     // Add more items here...
   ],
   Event: [
-    { id: 23, image: "/m4.jpg", price: "25,000", for: "for her", type: "gift" },
-    { id: 24, image: "/m5.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 25, image: "/m6.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 26, image: "/m7.jpg", price: "12,000", for: "for kids", type: "toy" },
-    { id: 27, image: "/m8.jpg", price: "12,000", for: "for kids", type: "toy" },
+    { id: 23, image: "/m4.jpg", price: 25000, for: "for her", type: "gift" },
+    { id: 24, image: "/m5.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 25, image: "/m6.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 26, image: "/m7.jpg", price: 12000, for: "for kids", type: "toy" },
+    { id: 27, image: "/m8.jpg", price: 12000, for: "for kids", type: "toy" },
     {
       id: 28,
       image: "/m9.jpg",
-      price: "18,000",
+      price: 18000,
       for: "for him",
       type: "package",
     },
     {
       id: 29,
       image: "/m10.jpg",
-      price: "25,000",
+      price: 25000,
       for: "for her",
       type: "gift",
     },
     {
       id: 30,
       image: "/m11.jpg",
-      price: "12,000",
+      price: 12000,
       for: "for kids",
       type: "toy",
     },
@@ -78,41 +78,41 @@ const data = {
     // Your Event data
   ],
   Anniversary: [
-    { id: 17, image: "/js.jpg", price: "25,000", for: "for her", type: "gift" },
+    { id: 17, image: "/js.jpg", price: 25000, for: "for her", type: "gift" },
     {
       id: 18,
       image: "/m30.jpg",
-      price: "12,000",
+      price: 12000,
       for: "for kids",
       type: "toy",
     },
     {
       id: 19,
       image: "/m40.jpg",
-      price: "12,000",
+      price: 12000,
       for: "for kids",
       type: "toy",
     },
     {
       id: 20,
       image: "/m1.jpg",
-      price: "18,000",
+      price: 18000,
       for: "for him",
       type: "package",
     },
-    { id: 20, image: "/m2.jpg", price: "25,000", for: "for her", type: "gift" },
-    { id: 20, image: "/m3.jpg", price: "12,000", for: "for kids", type: "toy" },
+    { id: 20, image: "/m2.jpg", price: 25000, for: "for her", type: "gift" },
+    { id: 20, image: "/m3.jpg", price: 12000, for: "for kids", type: "toy" },
     {
       id: 21,
       image: "/m70.jpg",
-      price: "12,000",
+      price: 12000,
       for: "for kids",
       type: "toy",
     },
     {
       id: 22,
       image: "/m60.jpg",
-      price: "12,000",
+      price: 12000,
       for: "for kids",
       type: "toy",
     },
@@ -122,44 +122,44 @@ const data = {
     {
       id: 23,
       image: "/m30.jpg",
-      price: "12,000",
+      price: 12000,
       for: "for kids",
       type: "toy",
     },
     {
       id: 24,
       image: "/m40.jpg",
-      price: "12,000",
+      price: 12000,
       for: "for kids",
       type: "toy",
     },
     {
       id: 25,
       image: "/m70.jpg",
-      price: "12,000",
+      price: 12000,
       for: "for kids",
       type: "toy",
     },
     {
       id: 26,
       image: "/m60.jpg",
-      price: "12,000",
+      price: 12000,
       for: "for kids",
       type: "toy",
     },
     {
       id: 27,
       image: "/m1.jpg",
-      price: "18,000",
+      price: 18000,
       for: "for him",
       type: "package",
     },
-    { id: 28, image: "/m2.jpg", price: "25,000", for: "for her", type: "gift" },
-    { id: 29, image: "/m3.jpg", price: "12,000", for: "for kids", type: "toy" },
+    { id: 28, image: "/m2.jpg", price: 25000, for: "for her", type: "gift" },
+    { id: 29, image: "/m3.jpg", price: 12000, for: "for kids", type: "toy" },
     {
       id: 30,
       image: "/m20.jpg",
-      price: "25,000",
+      price: 25000,
       for: "for her",
       type: "gift",
     },
@@ -169,6 +169,10 @@ const data = {
 const shopArrow = ">";
 
 const Items = ( {hideElement} ) => {
+
+//   const filteredItems = displayedItems.filter((item) =>
+//   item.for.toLowerCase().includes(searchInput.toLowerCase())
+// );
 
     const soloItemsRef = useRef(null); 
     
@@ -199,12 +203,15 @@ const Items = ( {hideElement} ) => {
     const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cart.items );
     const [isCartVisible, setCartVisible] = useState(false);
+
+    
   
     useEffect(() => {
       if (cartItems.length === 0) {
         const storedCartItems = localStorage.getItem('cartItems');
         if (storedCartItems) {
           dispatch(addToCart(JSON.parse(storedCartItems)));
+          handleClearCart()
         }
       }
     }, []);
@@ -229,15 +236,15 @@ const Items = ( {hideElement} ) => {
   const handleClearCart = () => {
     dispatch(clearCart());
   };
-  
+
   const getTotalPrice = () => {
-    if (!cartItems || cartItems.length === 0) {
-      return 0; // Return 0 if the cart is empty or cartItems is null/undefined
-    }
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
-  const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0) ;
+
+
+const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
 
 
 
@@ -251,7 +258,8 @@ const Items = ( {hideElement} ) => {
       <>
         <div className="cart-icon" onClick={handleToggleCart}>
         <ShoppingCart className='searchicon2' />
-        <span className="cart-count">{cartItemCount}</span>
+        <span className="cart-count">{cartItemCount >= 0 ? cartItemCount : 0}</span>
+
       </div>
 
       <div>
@@ -262,22 +270,28 @@ const Items = ( {hideElement} ) => {
             {cartItems.length > 0 ? (
               <>
                 {cartItems.map((item) => (
-                  <div key={item.id}>
-                    <p>{item.name}</p>
+                  <div className="item-each" key={item.id}>
+                    <p>{item.type}</p>
+                    <p>{item.for}</p>
+                    <img className="items-images" src={item.image} alt="" />
                     <p>${item.price}</p>
-                    <button onClick={() => handleRemoveFromCart(item)}>
+                    <div className="buttons">
+                    <button className="remove" onClick={() => handleRemoveFromCart(item)}>
                       Remove from Cart
                     </button>
-                    <button onClick={() => handleDecreaseQuantity(item)}>-</button>
+                    <div className="inc-btn">
+                    <button className="minus" onClick={() => handleDecreaseQuantity(item)}>-</button>
                     <span>{item.quantity}</span>
-                    <button onClick={() => handleIncreaseQuantity(item)}>+</button>
+                    <button className="plus" onClick={() => handleIncreaseQuantity(item)}>+</button>
+                    </div>
+                    </div>
                   </div>
                 ))}
-                <p>Total Price: ${getTotalPrice()}</p>
+                <p className="price">Total Price: ${getTotalPrice()}</p>
                 <Link to="/checkout">
                   <button className="checkout-button">Checkout</button>
                 </Link>
-                <button onClick={handleClearCart}>Clear Cart</button>
+                <button className="clear" onClick={handleClearCart}>Clear Cart</button>
               </>
             ) : (
               <p>No items in the cart</p>
@@ -295,10 +309,14 @@ const Items = ( {hideElement} ) => {
           <div className="items-list">
             <ul>
               {categories.map((category) => (
-                <li key={category}>
+                <li 
+                
+                className={selectedCategory === category ? "active" : ""}
+
+                key={category}>
                   <span
                     href="#"
-                    className={selectedCategory === category ? "active" : ""}
+                 
                     onClick={() => handleClickCategory(category)}
                   >
                     {category}
@@ -355,7 +373,7 @@ const Items = ( {hideElement} ) => {
 
           <div className="shop-now">
           <li>
-            <a href="">
+            <a href="/gift-catalogue">
               {" "}
               Shop Now
             <FaArrowCircleRight className="arrow-shop" />

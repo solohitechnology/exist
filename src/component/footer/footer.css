@@ -135,7 +135,9 @@ footer .footer-lower p {
     font-weight: bold;
 }
 
-
+footer .copy {
+    margin-right: 20px;
+}
 
 @media screen and (max-width:768px) {
     .footer {
