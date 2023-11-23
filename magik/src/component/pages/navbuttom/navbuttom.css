@@ -1,0 +1,254 @@
+/* navbuttom.css */
+.slide-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px; /* Adjust the height as needed */
+    overflow: hidden;
+    background-color: firebrick;
+    margin: 100px;
+    margin-top: 70px;
+  }
+
+  .slide-container p {
+    color: whitesmoke;
+    font-size: 55px;
+    font-family: monospace;
+    font-weight: bold;
+    margin: 5px;
+    margin-top: 100px;
+  }
+
+
+  .slide-container .button-gift {
+    width: 320px ;
+    height: auto ;
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 20px;
+    box-shadow: 1px 5px 15px 2px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+  }
+
+.slide-container .button-gift span img  {
+    width: 50px;
+    margin-right: 4px;
+    margin-top: 10px;
+}
+
+
+  .slide-container .button-gift a {
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  
+  .faceImg {
+    width: 100%; /* Set width to 100% to ensure the image covers the entire width of the div */
+    height: 100%;
+    background-size: cover; /* Use contain to fit the image inside the div while maintaining its aspect ratio */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center; /* Center the image within the div */
+    transition: background-image 0.5s;
+  }
+  
+  
+  /* Additional styling for the slider navigation buttons (if needed) */
+  .slider-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .slider-nav button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .slider-nav button:hover {
+    opacity: 0.7;
+  }
+  
+
+
+  @media screen and (max-width: 768px) {
+    .slide-container {
+      display: flex;
+      width: 100%;
+      /* flex-direction: column; */
+      justify-content: center;
+      align-items: center;
+      height: 250px; /* Adjust the height as needed */
+      overflow: hidden;
+      background-color: rgb(77, 66, 66);
+      margin: 0px;
+      /* margin-left: 50px; */
+      margin-right: 50px;
+      margin-top: 70px;
+      padding: 0px;
+    }
+
+    
+  .slide-container p {
+    color: whitesmoke;
+    font-size: 13px;
+    font-family: monospace;
+    font-weight: bold;
+    margin: 5px;
+    margin-top: 70px;
+    width: 150px;
+    text-align: center;
+  }
+
+  .slide-container .slide-right {
+    background-color: firebrick ;
+    width: 45%;
+    height: 100%;
+    text-align: left;
+    position: relative;
+  }
+
+
+  .slide-container .button-gift {
+    width: 120px ;
+    height: auto ;
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 20px;
+    box-shadow: 1px 5px 15px 2px black;
+    display: flex;
+    align-items: center;
+    margin-left: 3px;
+    margin: 10px;
+    justify-content: center;
+    margin-top: 50px;
+ 
+  }
+  .slide-container .button-gift span img  {
+    width: 20px;
+    margin-right: 4px;
+    margin-top: 5px;
+}
+
+
+  .slide-container .button-gift a {
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+    
+  .faceImg {
+    width: 55%; /* Set width to 100% to ensure the image covers the entire width of the div */
+    height: 100%;
+    background-size: cover; /* Use contain to fit the image inside the div while maintaining its aspect ratio */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center; /* Center the image within the div */
+    transition: background-image 0.5s;
+  }
+
+
+  }
+
+
+
+  
+
+  @media screen and (max-width: 320px) {
+    .slide-container {
+      display: flex;
+      width: 100%;
+      /* flex-direction: column; */
+      justify-content: center;
+      align-items: center;
+      height: 250px; /* Adjust the height as needed */
+      overflow: hidden;
+      background-color: firebrick;
+      margin: 0px;
+      /* margin-left: 50px; */
+      margin-right: 50px;
+      margin-top: 70px;
+      padding: 0px;
+    }
+
+    
+  .slide-container p {
+    color: whitesmoke;
+    font-size: 13px;
+    font-family: monospace;
+    font-weight: bold;
+    margin: 2px;
+    margin-top: 70px;
+    width: 150px;
+    text-align: center;
+  }
+
+  .slide-container .slide-right {
+    background-color: firebrick ;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    position: relative;
+  }
+
+
+  .slide-container .button-gift {
+    width: 120px ;
+    height: auto ;
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 20px;
+    box-shadow: 1px 5px 15px 2px black;
+    display: flex;
+    align-items: center;
+    margin-left: -0%;
+    margin: 10px;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    margin-top: 170px;
+    left: 0;
+    margin: 0x;
+  }
+  .slide-container .button-gift span img  {
+    width: 20px;
+    margin-right: 4px;
+    margin-top: 5px;
+}
+
+
+  .slide-container .button-gift a {
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+    
+  .faceImg {
+    width: 50%; /* Set width to 100% to ensure the image covers the entire width of the div */
+    height: 100%;
+    background-size: cover; /* Use contain to fit the image inside the div while maintaining its aspect ratio */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center; /* Center the image within the div */
+    transition: background-image 0.5s;
+  }
+
+
+  }

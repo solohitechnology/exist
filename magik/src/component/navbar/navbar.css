@@ -1,0 +1,351 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    /* background-color: white; */
+}
+
+.nav-bar .logo-div {
+    width: 100px;
+    height: 100px;
+    padding-top: 15px;
+}
+
+.nav-bar .logo-div img {
+    width: 100%;
+}
+
+.nav-bar .links-div {
+    /* background-color: yellow; */
+    width: 700px;
+    height: 100px;
+    border-bottom: 1px solid gray;
+
+}
+
+.nav-bar .links-div .links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-bar .links-div .links li {
+  list-style-type: none;
+  margin-top: 32px;
+  padding: 5px;
+}
+
+
+.nav-bar .links-div .links li:hover {
+     /* background-color: darkred; */
+     height: 67px;
+     border-bottom: 3px solid;
+  }
+
+  
+
+  .logo-mobile {
+    display: none;
+  }
+
+
+
+.nav-bar .links-div .links li a {
+    text-decoration: none;
+    font-size: 25px;
+    padding: 13px;
+    /* padding-bottom: 15px; */
+    font-weight: bold;
+    width: 10px;
+    height: 10%;
+    /* background-color: yellow; */
+    font-family: sans-serif;
+    color: gray;
+    margin-left: 10px;
+  }
+
+  
+.nav-bar .links-div .links li a:hover {
+    background-color: firebrick;
+    color: whitesmoke;
+    /* height: 67px;
+    border-bottom: 3px solid; */
+ }
+
+ /* Active link styles */
+.nav-link.active {
+    color: red; /* Change text color to red when active */
+  }
+  
+  .nav-link.active {
+    background-color: skyblue; /* Change background color to sky blue when active */
+  }
+  
+
+ 
+
+  .nav-bar .searchicon {
+    /* background-color: yellow; */
+    color: firebrick;
+    font-size: 50px;
+  }
+
+  
+  .nav-bar .searchicon1 {
+    /* background-color: yellow; */
+    color: firebrick;
+    width: 150px;
+    margin-left: 50px;
+  }
+
+  /* Add your styles for the active link here */
+.active {
+  background-color: firebrick; /* Choose your desired background color */
+  color: white; /* Choose your desired text color for the active link */
+}
+
+.links-div .links .active1 {
+  background-color: rgb(103, 95, 95); /* Choose your desired background color */
+  /* Choose your desired text color for the active link */
+}
+
+.active span {
+  color: white;
+}
+
+
+
+
+
+.nav-bar .cart-numb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 115px;
+    margin-top: 15px;
+    background-color: firebrick;
+    border-radius: 20px;
+    width: 20px;
+    height: 30px;
+    text-align: center;
+    padding: 2px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.navigation {
+  /* background-color:black; */
+  color: black;
+  z-index: 99;
+  display: none;
+}
+
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span {
+  display: flex;
+  width: 32px;
+  height: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  background: black;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #36383f;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 70vw;
+  height: 400px;
+  box-shadow: 0 0 10px #85888c;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  padding-top: 115px;
+  padding-bottom: 10px;
+  background-color: #f5f6fa;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  transition-delay: 2s;
+}
+
+
+#menu li a {
+  padding: 10px 0;
+  transition-delay: 2s;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+
+
+@media screen and (max-width:1024px ) {
+  .nav-bar {
+    display: none;
+  }
+
+  .active {
+    background-color: firebrick; /* Choose your desired background color */
+    color: white; /* Choose your desired text color for the active link */
+  }
+  
+  .active1 {
+    background-color: rgb(103, 95, 95); /* Choose your desired background color */
+    /* Choose your desired text color for the active link */
+  }
+  
+  .active span {
+    color: white;
+  }
+  
+
+  .soloimage {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+    width: 100px;
+    height: 100px;
+  
+    /* margin-bottom: 100px; */
+  }
+
+  .logo-mobile img {
+    width: 100%;
+  }
+
+  
+.navigation {
+  /* background-color:black; */
+  color: black;
+  z-index: 99;
+  display: block;
+  margin-top: 45px;
+  margin-left: 10px;
+  
+}
+
+}
+
+
+
+
+
+@media screen and (max-width:768px ) {
+  .nav-bar {
+    display: none;
+  }
+
+  .active {
+    background-color: firebrick; /* Choose your desired background color */
+    color: white; /* Choose your desired text color for the active link */
+  }
+  
+  .active1 {
+    background-color: rgb(103, 95, 95); /* Choose your desired background color */
+    /* Choose your desired text color for the active link */
+  }
+  
+  .active span {
+    color: white;
+  }
+  
+
+  .soloimage {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+    width: 100px;
+    height: 100px;
+  
+    /* margin-bottom: 100px; */
+  }
+
+  .logo-mobile img {
+    width: 100%;
+  }
+
+  
+.navigation {
+  /* background-color:black; */
+  color: black;
+  z-index: 99;
+  display: block;
+  margin-top: 45px;
+  margin-left: 10px;
+  
+}
+
+}
+
+
+
