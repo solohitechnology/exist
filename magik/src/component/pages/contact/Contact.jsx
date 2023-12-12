@@ -1,12 +1,33 @@
 import './contact.css'
 import Mymap from '../mymap/Mymap'
+import { Helmet } from 'react-helmet'
 
 
 
 
 const Contact = () => {
+
+    const structuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        name: 'Magikworld Contact',
+        description: 'Contact Magikworld for inquiries and messages.',
+        url: 'https://www.magikworld01.com/contact',
+        mainEntity: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Abuja Nigeria',
+          addressRegion: 'Nation wide',
+          postalCode: '900001',
+          streetAddress: ' Abuja office: Kafe garden estate life camp, Abuja ',
+        },
+      };
+
     return(
         <>
+           <Helmet>
+      <title> Magikworld | Contact us </title>
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      </Helmet>
         <div className="contact-div">
             <div className="contact-text">
              <h1>GET IN TOUCH</h1>

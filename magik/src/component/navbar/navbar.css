@@ -75,7 +75,7 @@
 
  /* Active link styles */
 .nav-link.active {
-    color: red; /* Change text color to red when active */
+    /* color: red; Change text color to red when active */
   }
   
   .nav-link.active {
@@ -104,6 +104,15 @@
   background-color: firebrick; /* Choose your desired background color */
   color: white; /* Choose your desired text color for the active link */
 }
+
+
+.dropdownB li a.active {
+  background-color: firebrick;
+  color: white;
+}
+
+
+
 
 .links-div .links .active1 {
   background-color: rgb(103, 95, 95); /* Choose your desired background color */
@@ -234,6 +243,101 @@
 #menuToggle input:checked ~ ul {
   transform: none;
 }
+
+
+/* Add some styling to the label for better visibility */
+label {
+  display: block;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Style the dropdown */
+select {
+  width: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Add a slight shadow on focus for better user experience */
+select:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 5px firebrick;
+  border: 2px solid firebrick;
+}
+
+/* Style the dropdown options */
+select option {
+  font-size: 14px;
+}
+
+/* Optional: Add some spacing or styling for better aesthetics */
+/* Adjust these styles according to your design preferences */
+
+
+/* Optional: Add a subtle background color on hover for the options */
+select option:hover {
+  background-color: #f5f5f5;
+}
+
+
+.sublinks {
+
+  top: 10%;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 10;
+  font-size: 10px;
+}
+
+#menu li:hover .sublinks {
+  display: block;
+}
+
+.sublinks li {
+  display: block;
+  padding: 5px;
+}
+
+.sublinks a {
+  color: #333;
+  font-size: 10px;
+}
+
+.sublinks a:hover {
+  color: #007bff;
+}
+
+
+.links-div .links .dropdownB {
+  position: absolute;
+
+  padding: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out; /* Add a transition for smooth animation */
+}
+
+.links-div .links .dropdown-menu1:hover .dropdownB {
+  max-height: 700px; /* Set a value that is greater than the expected height of your dropdown */
+  background-color: rgb(249, 249, 249);
+  border-radius: 10px;
+  border: 1px solid;
+  text-align: center;
+  width: 30%;
+}
+
+.links-div .links {
+  display: block;
+  position: relative;
+}
+
 
 
 

@@ -1,17 +1,13 @@
-
-
-
-
-
-
-import { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart } from './CartSlice';
 import { useNavigate } from 'react-router-dom';
 import { ShoppingCart } from "@material-ui/icons";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import axios from "axios";
+import { Helmet } from 'react-helmet';
 import './items.css';
+import { SearchOutlined } from '@material-ui/icons';
 
 const Items = ({ hideElement }) => {
   const [totalAmount, setTotalAmount] = useState(0);
@@ -20,18 +16,19 @@ const Items = ({ hideElement }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [displayedItems, setDisplayedItems] = useState([]);
   const [allItems, setAllItems] = useState([]);
+  const [searchInput, setSearchInput] = useState('');
+  const [isCartVisible, setCartVisible] = useState(false);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
-  const [isCartVisible, setCartVisible] = useState(false);
- 
-console.log(cartItems)
 
-  const soloItemsRef = useRef(null);
+  const categories = ["Popular", "Event", "Anniversary", "Specialgift"];
+  const itemsPerPage = 8;
 
-  const categories = ["Popular", "Event", "Anniversary", "specialgift"];
-  const itemsPerPage = 8; // Number of items to display per page
+  const handleSearchInputChange = (event) => {
+    setSearchInput(event.target.value);
+  };
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -41,7 +38,6 @@ console.log(cartItems)
     setSelectedCategory(category);
     setCurrentPage(1);
   };
-  
 
   const handleToggleCart = () => {
     setCartVisible(!isCartVisible);
@@ -50,58 +46,75 @@ console.log(cartItems)
   useEffect(() => {
     const getallItems = async () => {
       try {
-        const response = await axios.get('/api/items');  // Fix the typo here
+        const response = await axios.get('/api/items', {
+          withCredentials: true,
+          headers: {
+            'Content-Type': 'application/json',
+            // You can add other headers if needed
+          },
+        });
+        console.log(response.data);
         setAllItems(response.data);
-        console.log('solo response', JSON.stringify(response.data));
-        console.log(response)
-        handleClearCart()
       } catch (e) {
         console.log(e);
       }
     };
-  
     getallItems();
   }, []);
-  
+
+
 
   useEffect(() => {
-    const selectedItems = allItems.filter(item => item.type.toLowerCase() === selectedCategory.toLowerCase());
+    const selectedItems = allItems.map(item => ({
+      ...item,
+      isVisible:
+        item.type.toLowerCase() === selectedCategory.toLowerCase() &&
+        (item.for.toLowerCase().includes(searchInput.toLowerCase()) ||
+          item.price.toString().includes(searchInput)),
+    }));
+
+    const visibleItems = selectedItems.reduce((acc, item) => {
+      if (item.isVisible) {
+        acc.push(item);
+      }
+      return acc;
+    }, []);
+
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const slicedItems = selectedItems.slice(startIndex, endIndex);
+    const slicedItems = visibleItems.slice(startIndex, endIndex);
 
     setDisplayedItems(slicedItems);
-    setTotalPages(Math.ceil(selectedItems.length / itemsPerPage));
-  }, [allItems, selectedCategory, itemsPerPage, currentPage]);
+    setTotalPages(Math.ceil(visibleItems.length / itemsPerPage));
+  }, [allItems, selectedCategory, itemsPerPage, currentPage, searchInput]);
+
 
   useEffect(() => {
-    const newTotalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    const newTotalAmount = cartItems.reduce((total, item) => {
+      const itemPrice = item.price || 0;
+      const itemQuantity = item.quantity || 0;
+      return total + itemPrice * itemQuantity;
+    }, 0);
     setTotalAmount(newTotalAmount);
   }, [cartItems]);
 
-
   useEffect(() => {
-    if (cartItems.length === 0) {
-      const storedCartItems = localStorage.getItem('cartItems');
-      if (storedCartItems) {
-        dispatch(addToCart(JSON.parse(storedCartItems)));
-        handleClearCart()
-      }
+    const storedCartItems = localStorage.getItem('cartItems');
+    if (storedCartItems && cartItems.length === 0) {
+      dispatch(addToCart(JSON.parse(storedCartItems)));
     }
-  }, []);
-  
+  }, [cartItems, dispatch]);
 
   const handleAddToCart = (product) => {
     dispatch(addToCart({
-      id: product._id,  // Assuming the server provides an _id property
+      id: product._id,
       type: product.type,
-      name: product.for,  // Add other properties as needed
+      name: product.for,
       price: product.price,
-      image: product.image,  // Include the image URL in the cart item
+      image: product.image,
       quantity: 1,
     }));
   };
-  
 
   const handleRemoveFromCart = (product) => {
     dispatch(removeFromCart(product));
@@ -116,11 +129,16 @@ console.log(cartItems)
   };
 
   const handleClearCart = () => {
+    localStorage.removeItem('cartItems');
     dispatch(clearCart());
   };
 
   const getTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    return cartItems.reduce((total, item) => {
+      const itemPrice = item.price || 0;
+      const itemQuantity = item.quantity || 0;
+      return total + itemPrice * itemQuantity;
+    }, 0);
   };
 
   const handleCheckout = () => {
@@ -132,14 +150,46 @@ console.log(cartItems)
     });
   };
 
-  const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+  const generateProductStructuredData = (product) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: product.for,
+      description: product.type,
+      image: `https://magikworld01.com/uploads/${product.image}`,
+      sku: product.id,
+      offers: {
+        '@type': 'Offer',
+        price: product.price,
+        priceCurrency: 'NGN, USD', // Replace with the appropriate currency code
+        availability: 'https://schema.org/InStock',
+        seller: {
+          '@type': 'Organization',
+          name: 'Magik World',
+        },
+      },
+    };
+  };
 
   return (
     <>
+
       <div className="cart-icon" onClick={handleToggleCart}>
         <ShoppingCart className='searchicon2' />
-        <span className="cart-count">{cartItemCount >= 0 ? cartItemCount : 0}</span>
+        <span className="cart-count">{cartItems.length >= 0 ? cartItems.length : 0}</span>
       </div>
+
+      {hideElement ? (
+        <div className="searchcart">
+          <input
+            type="text"
+            placeholder="Find your gift and personalise"
+            value={searchInput}
+            onChange={handleSearchInputChange}
+          />
+          <SearchOutlined className="catalog-search-icon" />
+        </div>
+      ) : null}
 
       <div>
         {isCartVisible && (
@@ -152,7 +202,7 @@ console.log(cartItems)
                     <div className="item-each" key={item.id}>
                       <p>{item.type}</p>
                       <p>{item.name}</p>
-                      <img className="items-images"  src={`https://magikworld01.com/uploads/${item.image}`} alt="" />
+                      <img className="items-images" src={`/uploads/${item.image}`} alt="" />
                       <p>${item.price}</p>
                       <div className="buttons">
                         <button className="remove" onClick={() => handleRemoveFromCart(item)}>
@@ -182,7 +232,7 @@ console.log(cartItems)
 
       <div className="items-container">
         {hideElement ? null : (
-          <h1 className="solo" ref={soloItemsRef}>Trending Gift</h1>
+          <h1 className="solo">Trending Gift</h1>
         )}
         <div className="items-list">
           <ul>
@@ -203,16 +253,20 @@ console.log(cartItems)
         </div>
 
         <div className="cart-container">
-          {displayedItems.map((item) => (
+          {displayedItems?.map((item) => (
+
             <div key={item.id} className="items-cart-contianer">
+              <Helmet>
+                <script type="application/ld+json">{JSON.stringify(generateProductStructuredData(item))}</script>
+              </Helmet>
               <div className="items-img">
-                <img src={`https://magikworld01.com/uploads/${item.image}`} alt="" />
+                <img src={`/uploads/${item.image}`} alt="" />
               </div>
               <div className="items-details">
-                <span className="for">{item.for}</span>{" "}
+                <span className="for"> {item.for}</span>{" "}
                 <span className="items-price">₦{item.price}</span>
               </div>
-              <p>{item.type}</p>
+              <p> {item.type}</p>
               <div className="add-to-cart">
                 <li>
                   <span onClick={() => handleAddToCart(item)}>
@@ -243,6 +297,8 @@ console.log(cartItems)
             </div>
           )}
         </div>
+
+
 
         {hideElement ? null : (
           <div className="shop-now">

@@ -24,7 +24,8 @@ const Mymap = () => {
 
     // Add marker with custom icon
     L.marker([9.1000, 7.4951], { icon: customIcon }).addTo(map)
-      .bindPopup('MAGIK WORLD01 - Gwarimpa, Abuja, Nigeria')
+      .bindPopup('Lagos office No 13 Bashiru street, Ojodu Berger Lagos')
+      
       .openPopup();
   }, []); // Ensure this effect runs only once after the initial render
 

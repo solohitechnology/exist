@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import './catlog.css';
 import Items from '../items/Items';
 import { SearchOutlined } from '@material-ui/icons';
-
+import { Helmet } from 'react-helmet';
 
 
 
@@ -20,6 +20,11 @@ const Catlog = () => {
 
     return (
         <>
+            <Helmet>
+                <title>For Her, For Him, Flowers, Christmas Hampas, Food Tray, Valentine’s Day gift, Anniversary , Event Decorations </title>
+            </Helmet>
+
+
             <div className="catalog-container">
                 <div className='catalog-text' >
                     <h1> Continue Shopping </h1>
@@ -29,23 +34,14 @@ const Catlog = () => {
                     <img src="/catalog.jpg" alt="" />
                 </div>
             </div>
-            <div className="searchcart">
-                <input
-                    type="text"
-                    placeholder="Find your gift and personalise"
-                    value={searchInput}
-                    onChange={handleSearchInputChange}
-                />
-                <SearchOutlined className="catalog-search-icon" />
-            </div>
 
-            <Items hideElement={hideElement} searchInput={searchInput} />
+            <Items hideElement={hideElement} />
 
 
             <div className="person-gift">
 
                 <h1>Personalized your Gift</h1>
-                <p>problems trying to resolve the conflict between the two major realm of Classical physics</p>
+                <p>Custom-crafted treasures for special moments</p>
 
 
                 <div className="button-div">

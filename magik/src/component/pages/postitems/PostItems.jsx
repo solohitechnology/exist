@@ -65,7 +65,7 @@ const PostItems = () => {
         </label>
         <br />
         <label>
-          For:
+          Name:
           <input type="text" name="for" value={formData.for} onChange={handleChange} />
         </label>
         <br />

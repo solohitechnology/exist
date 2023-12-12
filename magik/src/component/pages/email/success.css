@@ -1,0 +1,29 @@
+/* SuccessPage.css */
+
+.success-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+  }
+  
+  .success-container h1 {
+    color: #4caf50; /* Green color */
+  }
+  
+  .success-container p {
+    font-size: 18px;
+  }
+  
+  .success-image {
+    width: 200px;
+    margin: 20px 0;
+  }
+  
+  .back-to-home-link {
+    display: block;
+    color: #2196f3; /* Blue color */
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  

@@ -111,7 +111,7 @@ video {
 .tellus .tellus-form form .massage {
     width: 460px;
     /* background-color: green; */
-    margin: 40px;
+    margin: 0px;
 }
 
 .tellus .tellus-form form .massage  textarea {
@@ -121,6 +121,7 @@ video {
     border-bottom: 2px solid gray;
     outline: none;
     padding: 5px;
+    height: 120px;
 }
 
 @media screen and (max-width:768px) {
@@ -134,7 +135,7 @@ video {
         height: 142vh;
         padding: 0px;
         position: relative;
-        margin-bottom: ;
+        margin-bottom: 0;
     }
     
     video {
@@ -242,10 +243,10 @@ video {
 
 
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:390px) {
 
     .tellus {
-        background-color: black;
+        background-color: rgb(238, 238, 238);
         opacity: 0.9;
         color: white;
         /* margin-left: 100px;
@@ -303,7 +304,7 @@ video {
     flex-direction: column;
     border-radius: 20px;
     align-items: center;
-    padding: 10px;
+    padding: 3px;
 }
 
 .tellus .tellus-form h1 {
@@ -358,6 +359,7 @@ video {
     border-bottom: 2px solid gray;
     outline: none;
     padding: 5px;
+    height: 50px;
 }
 
 }

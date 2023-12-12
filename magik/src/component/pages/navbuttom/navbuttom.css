@@ -5,7 +5,7 @@
     align-items: center;
     height: 500px; /* Adjust the height as needed */
     overflow: hidden;
-    background-color: firebrick;
+    /* background-color: firebrick; */
     margin: 100px;
     margin-top: 70px;
   }
@@ -80,6 +80,10 @@
   
   .slider-nav button:hover {
     opacity: 0.7;
+  }
+
+  .slide-container .slide-right{
+    background-color: firebrick;
   }
   
 

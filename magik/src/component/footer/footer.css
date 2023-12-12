@@ -12,15 +12,29 @@
 
 .footer .info-div {
     margin-top: 50px;
+    text-align: center;
+}
+
+.footer .info-div li {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 70%;
+    color: whitesmoke;
 }
 
 .footer .info-div p {
-    width: 250px;
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    margin-top: 10px;
+    font-size: 80%;
+    
 }
 
 .footer .info-div img {
     width: 80px;
-    margin-left: 70px;
     border-radius: 10px;
 }
 
@@ -117,7 +131,7 @@ footer .footer-lower .last-links li {
 
 
 footer .footer-lower .last-links li  a{
-    font-size: 15px;
+    font-size: 70%;
     font-weight: bold;
     font-family: sans-serif;
     color: white;
@@ -155,19 +169,16 @@ footer .copy {
     
     .footer .info-div {
         margin-top: 50px;
-        display: flex;
-        flex-direction: column;
+        
     }
     
     .footer .info-div p {
-        width: 250px;
-        margin-left: 10%;
     }
     
     .footer .info-div img {
         width: 80px;
-        margin-left: 35%;
         border-radius: 10px;
+        margin-left: auto;
     }
     
     .footer .info-div .social-icon {
@@ -175,7 +186,7 @@ footer .copy {
         /* background-color: yellow; */
         display: flex;
         justify-content: space-around;
-        margin-right: 25px;
+        
     }
     
     .footer .info-div .social-icon  li {
@@ -308,21 +319,12 @@ footer .copy {
         flex-wrap: wrap;
     }
     
-    .footer .info-div {
-        margin-top: 50px;
-        display: flex;
-        /* flex-direction: column; */
-        margin-left: 40px;
-    }
-    
     .footer .info-div p {
-        width: 250px;
-        margin-left: 10%;
+        
     }
     
     .footer .info-div img {
         width: 80px;
-        margin-left: 35%;
         border-radius: 10px;
     }
     
@@ -331,7 +333,7 @@ footer .copy {
         /* background-color: yellow; */
         display: flex;
         justify-content: space-around;
-        margin-right: 25px;
+        margin-right: 30px;
     }
     
     .footer .info-div .social-icon  li {
@@ -371,7 +373,9 @@ footer .copy {
         height: 100%;
         margin-top: 70px;
         gap: 50px;
-        margin-left: 39%;
+        margin-left: 9px;
+        justify-content: left;
+        /* background-color: yellow; */
     }
     
     .footer .footer-links .links ul {
@@ -406,7 +410,8 @@ footer .copy {
         justify-content: space-between;
         flex-direction: column;
         background-color: black;
-        padding-left: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
         position: relative;
         height: auto;
     }
@@ -414,6 +419,7 @@ footer .copy {
     footer .footer-lower .last-links {
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         width: 100%;
         margin-bottom: 100px;
     }
