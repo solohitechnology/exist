@@ -1,5 +1,3 @@
-// PaystackPaymentForm.js
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
@@ -86,8 +84,6 @@ const PaystackPaymentForm = () => {
       isValid = false;
       errors.country = 'Country is required';
     }
-    
-    // Add similar validation for other fields...
 
     setValidationErrors(errors);
     return isValid;
@@ -194,7 +190,7 @@ const PaystackPaymentForm = () => {
             className="form-control"
             required
           />
-          {validationErrors.name && (
+          {validationErrors.address && (
             <div className="text-danger">{validationErrors.address}</div>
           )}
         </div>
@@ -209,11 +205,10 @@ const PaystackPaymentForm = () => {
             className="form-control"
             required
           />
-          {validationErrors.name && (
+          {validationErrors.city && (
             <div className="text-danger">{validationErrors.city}</div>
           )}
         </div>
-
 
         <div className="form-group">
           <label>Country:</label>
@@ -225,7 +220,7 @@ const PaystackPaymentForm = () => {
             className="form-control"
             required
           />
-          {validationErrors.name && (
+          {validationErrors.country && (
             <div className="text-danger">{validationErrors.country}</div>
           )}
         </div>

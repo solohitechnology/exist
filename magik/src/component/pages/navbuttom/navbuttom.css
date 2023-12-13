@@ -85,6 +85,93 @@
   .slide-container .slide-right{
     background-color: firebrick;
   }
+
+
+    
+
+  @media screen and (max-width: 800px) {
+    .slide-container {
+      display: flex;
+      width: 100%;
+      /* flex-direction: column; */
+      justify-content: center;
+      align-items: center;
+      height: 250px; /* Adjust the height as needed */
+      overflow: hidden;
+      background-color: firebrick;
+      margin: 0px;
+      /* margin-left: 50px; */
+      margin-right: 50px;
+      margin-top: 70px;
+      padding: 0px;
+    }
+
+    
+  .slide-container p {
+    color: whitesmoke;
+    font-size: 13px;
+    font-family: monospace;
+    font-weight: bold;
+    margin: 2px;
+    margin-top: 70px;
+    width: 150px;
+    text-align: center;
+  }
+
+  .slide-container .slide-right {
+    background-color: firebrick ;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    position: relative;
+  }
+
+
+  .slide-container .button-gift {
+    width: 120px ;
+    height: auto ;
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 20px;
+    box-shadow: 1px 5px 15px 2px black;
+    display: flex;
+    align-items: center;
+    margin-left: -0%;
+    margin: 10px;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    margin-top: 170px;
+    left: 0;
+    margin: 0x;
+  }
+  .slide-container .button-gift span img  {
+    width: 20px;
+    margin-right: 4px;
+    margin-top: 5px;
+}
+
+
+  .slide-container .button-gift a {
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+    
+  .faceImg {
+    width: 50%; /* Set width to 100% to ensure the image covers the entire width of the div */
+    height: 100%;
+    background-size: cover; /* Use contain to fit the image inside the div while maintaining its aspect ratio */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center; /* Center the image within the div */
+    transition: background-image 0.5s;
+  }
+
+
+  }
   
 
 

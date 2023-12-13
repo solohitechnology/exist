@@ -25,7 +25,7 @@ const TranslationButton = () => {
     style.innerHTML = `
       #google_translate_element {
         position: fixed;
-        top: 100px;
+        top: 150px;
         right: 60px;
         z-index: 999;
         background: whitesmoke;
@@ -48,13 +48,27 @@ const TranslationButton = () => {
       .goog-te-gadget-icon {
         display: none;
       }
+
+      @media (max-width: 1280px) {
+        #google_translate_element {
+          top: 240px;
+          right: 22%;
+          margin: 10px;
+          padding: 2px;
+        }
+        
+        .goog-te-combo {
+          font-size: 12px;
+          padding: 4px;
+        }
+      }
       
       /* Mobile styles */
       @media (max-width: 768px) {
         #google_translate_element {
-          top: 340px;
+          top: 240px;
           right: 0px;
-          margin:10px;
+          margin: 10px;
           padding: 2px;
         }
         
@@ -83,41 +97,34 @@ const TranslationButton = () => {
           'google_translate_element'
         );
         document.querySelector('.goog-te-menu-value span').textContent = 'Translate';
-      }
+        }
     `;
-  
+
     document.head.appendChild(googleTranslateScript);
-  
+
     const googleTranslateScriptSrc = document.createElement('script');
     googleTranslateScriptSrc.src =
       '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     googleTranslateScriptSrc.async = true;
-  
+
     document.head.appendChild(googleTranslateScriptSrc);
   }, []);
 
   return (
     <div id="google_translate_element">
       {isMobile ? (
-        <div>
-          {/* <button onClick={handleTranslateClick}></button> */}
-          {/* <LanguageSelector
-            selectedLanguage={selectedLanguage}
-            onLanguageChange={handleLanguageChange}
-          /> */}
-        </div>
+      <>
+      </>
       ) : null}
     </div>
   );
 };
 
 const LanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
-  // Example language options, you can replace with your own
   const languageOptions = [
     { code: 'en', name: 'English' },
-    { code: 'es', name: 'Spanish' },
-    { code: 'fr', name: 'French' },
-    // Add more languages as needed
+    { code: 'yo', name: 'Yoruba' },
+    { code: 'ig', name: 'Igbo' },
   ];
 
   return (
@@ -135,3 +142,9 @@ const LanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
 };
 
 export default TranslationButton;
+
+
+
+
+
+

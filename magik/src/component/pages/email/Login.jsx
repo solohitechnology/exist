@@ -6,6 +6,10 @@ const LoginForm = () => {
     email: '',
     password: '',
   });
+  
+//   REFRESH_TOKEN_KEY=solohitechnology
+//   JWT_KEY=solomon
+//   MANAGMENT=mongodb+srv://solohitechnology01:solohitech09@cluster0.hs0r01y.mongodb.net/management
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

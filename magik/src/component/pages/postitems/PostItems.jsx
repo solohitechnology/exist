@@ -1,4 +1,3 @@
-// PostItems.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import './postitems.css'; // Import the CSS file
@@ -12,6 +11,7 @@ const PostItems = () => {
     type: '',
   });
   const [massage, setMassage] = useState('');
+  const [loading, setLoading] = useState(false); // New loading state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,6 +25,8 @@ const PostItems = () => {
     e.preventDefault();
 
     try {
+      setLoading(true); // Set loading to true while uploading
+
       // Create a FormData object
       const formData = new FormData();
       formData.append('id', 0);
@@ -45,6 +47,8 @@ const PostItems = () => {
     } catch (error) {
       // Handle errors
       console.error('Error adding item:', error.message);
+    } finally {
+      setLoading(false); // Set loading back to false
     }
   };
 
@@ -77,11 +81,13 @@ const PostItems = () => {
             <option value="Event">Event</option>
             <option value="Anniversary">Anniversary</option>
             <option value="specialgift">SpecialGift</option>
-            {/* Add more options as needed */}
+          
           </select>
         </label>
         <br />
-        <button type="submit">Add Item</button>
+        <button type="submit" disabled={loading}>
+          {loading ? 'Uploading...' : 'Add Item'}
+        </button>
       </form>
     </div>
   );
